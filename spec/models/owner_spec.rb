@@ -15,4 +15,5 @@ describe Owner do
   it { should_not have_valid(:email_address).when("steve", "ben", "this is not an email") }
 
   it { should have_many(:buildings) }
+  
 end
