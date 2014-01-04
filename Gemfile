@@ -49,6 +49,8 @@ group :development do
   gem "quiet_assets"
 end 
 
+gem 'carmen-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
