@@ -171,5 +171,4 @@ context "check to see if a building can be created succesfully" do
 
     end
   end 
-  
 end
