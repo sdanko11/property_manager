@@ -1,5 +1,5 @@
 class Building < ActiveRecord::Base
-  belongs_to :owner
+  belongs_to :owner, dependent: :destroy
   validates_presence_of :city
   validates_presence_of :state
   validates_presence_of :address

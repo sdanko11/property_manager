@@ -19,4 +19,6 @@ describe Building do
 
   it { should have_valid(:owner).when(Owner.new) }
 
+  it { should belong_to(:owner).dependent(:destroy) }
+
 end
