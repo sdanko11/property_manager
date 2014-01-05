@@ -1,9 +1,5 @@
 class OwnersController < ApplicationController
 
-  def index
-    @owners=Owner.all
-  end
-
   def new
     @owner = Owner.new
   end
@@ -19,11 +15,13 @@ class OwnersController < ApplicationController
     end
   end
 
-  def destroy
-    @owner = Owner.find(params[:id])
-    @owner.delete
-    # redirect_to blog_posts_path
-  end
+  # def destroy
+  #   @owner = Owner.find(params[:id])
+  #   @owner.delete
+  #   # redirect_to new_category_path
+  # end
+
+  private
   
   def owner_params
     params.require(:owner).permit(:first_name, :last_name, :email_address, :companny_name)
