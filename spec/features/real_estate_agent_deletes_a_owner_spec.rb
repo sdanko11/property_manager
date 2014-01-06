@@ -8,17 +8,8 @@ describe 'A real estate agent creates a new building' do
     after they are deleted from the system" do
 
       owner1 = FactoryGirl.create(:owner)
-      building = FactoryGirl.build(:building)
-      visit 'buildings/new'
+      building = FactoryGirl.create(:building, owner: owner1)
 
-      fill_in 'Name', :with => building.name
-      fill_in "Address", :with => building.address
-      fill_in "City", :with => building.city
-      fill_in "State", :with => building.state
-      fill_in "Zip code", :with => building.zip_code
-      fill_in "Description", :with => building.description
-      page.select(owner1.last_name, :from => "Owner")
-      click_button "Create Building"
       visit '/buildings/'
 
       expect(page).to have_content building.name
