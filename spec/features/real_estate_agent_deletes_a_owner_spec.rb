@@ -28,13 +28,13 @@ describe 'A real estate agent creates a new building' do
       expect(page).to have_content building.zip_code
       expect(page).to have_content owner1.first_name
       expect(page).to have_content owner1.last_name
-      expect(building.owner != nil)
+      expect(building.owner_id == owner1.id)
 
       click_link "Delete Owner"
 
       expect(page).to_not have_content owner1.first_name
       expect(page).to_not have_content owner1.last_name
-      expect(building.owner == nil)
+      expect(building.owner_id == nil)
     end
   end
 end
