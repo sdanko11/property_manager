@@ -1,5 +1,5 @@
 class Building < ActiveRecord::Base
-  belongs_to :owner, dependent: :destroy
+  belongs_to :owner
   validates_presence_of :city
   validates_presence_of :state
   validates_presence_of :address
@@ -9,6 +9,5 @@ class Building < ActiveRecord::Base
   'FL', 'GA', 'HI','IA', 'ID', 'IL', 'IN', 'KS','KY', 'LA','MA', 'MD', 'ME', 'MI', 'MN', 'MO', 
   'MS','MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY','OH', 'OK', 'OR','PA','RI','SC',
   'SD', 'TN','TX', 'UT','VA', 'VT','WA','WI','WV','WY',]
-  
 end
 

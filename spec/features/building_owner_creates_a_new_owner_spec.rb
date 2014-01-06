@@ -8,9 +8,7 @@ describe 'a real estate agent wants to add a new owner' do
   #Must have the option to add an email address
   #Must have the option to add a company name
 
-context "check to see that all the fields are available" do
-
-    it "It has all the correnct fields available" do
+    it "It has all the correnct fields available to create an owner" do
 
       visit 'owners/new'
       
@@ -19,7 +17,6 @@ context "check to see that all the fields are available" do
       expect(page).to have_content "Email address"
       expect(page).to have_button "Create Owner"   
     end
-  end
 
 context "check to see if a owner can be created succesfully" do
 
@@ -45,6 +42,7 @@ context "check to see if a owner can be created succesfully" do
   context "Owner is not created if all fields are not filled" do
 
     it "does not create an owner when you do not fill in email_address" do
+
       owner = FactoryGirl.create(:owner)
       visit 'owners/new'
 

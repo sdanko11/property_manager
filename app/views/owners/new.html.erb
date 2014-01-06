@@ -1,12 +1,8 @@
 Add a New Owner
-<%=flash[:owner_added]%>
-<%=flash[:owner_not_added]%>
-
-<br>
-<br>
-<hr>
+<br><%=flash[:owner_added]%><br>
+<%=flash[:owner_not_added]%><br>
 <%= form_for(@owner) do |f| -%>
-        <%= f.label(:first_name) %>
+        <%= f.label(:first_name) %><br>
         <%= f.text_field(:first_name)%><br />
         <%= f.label(:last_name) %><br>
         <%= f.text_field(:last_name) %><br />
