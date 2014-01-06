@@ -9,5 +9,10 @@ class Building < ActiveRecord::Base
   'FL', 'GA', 'HI','IA', 'ID', 'IL', 'IN', 'KS','KY', 'LA','MA', 'MD', 'ME', 'MI', 'MN', 'MO', 
   'MS','MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY','OH', 'OK', 'OR','PA','RI','SC',
   'SD', 'TN','TX', 'UT','VA', 'VT','WA','WI','WV','WY',]
+
+
+  def format_owner_name
+    "#{owner.first_name} #{owner.last_name}"
+  end
 end
 

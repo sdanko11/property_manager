@@ -19,11 +19,6 @@ class BuildingsController < ApplicationController
       render :new
     end
   end
-
-  # def destroy
-  #   @owner = Owner.find(params[:id])
-  #   @owner.delete
-  # end
   
   def building_params
     params.require(:building).permit(:name, :address, :state, :zip_code, :owner_id, :city,

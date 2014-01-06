@@ -1,0 +1,14 @@
+<% @buildings.each do |building| %>
+<h2>Property</h2>
+  <%=building.name %><br>
+  <%=building.address %><br>
+  <%=building.city %><br>
+  <%=building.state %><br>
+  <%=building.zip_code %><br>
+  <%if building.owner != nil %>
+   Owner: <%=building.format_owner_name %><br>
+   <%= link_to "Delete Owner", building.owner, method: :delete %>
+  <%else%>
+    No Owner<br>
+  <%end%>
+<%end%>

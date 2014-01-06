@@ -15,11 +15,11 @@ class OwnersController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @owner = Owner.find(params[:id])
-  #   @owner.delete
-  #   # redirect_to new_category_path
-  # end
+   def destroy
+    @owner = Owner.find(params[:id])
+    @owner.delete
+    redirect_to buildings_path
+  end
 
   private
   
