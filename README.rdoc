@@ -23,6 +23,8 @@ Things you may want to cover:
 
 * ...
 
+[ ![Codeship Status for sdanko11/property_manager](https://www.codeship.io/projects/5410cf00-3edd-0132-23ae-5649536ddeb8/status)](https://www.codeship.io/projects/43558)
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
